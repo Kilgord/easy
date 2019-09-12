@@ -6,38 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp11
 {
-    public class Calculator
+    ublic class Calculator
     {
-        
+        public static void Sum(int a, int b) => Write.WriteNum(a + b);
 
+        public static void Del(int a, int b) => Write.WriteNum(a - b);
 
+        public static void Mult(int a, int b) => Write.WriteNum(a * b);
 
-        public static int Sum(int a, int b)
-        {
- 
-            return a+b;
-        }
-        public static int diff(int a, int b)
-        {
-            
-            return a - b;
-        }
-        public static int comp(int a, int b)
-        {
-            return a*b;
-        }
+        public static void Div(int a, double b) => Write.WriteNum(a / b);
+    }
 
-        public static int del(int a, int b)
-        {
-            return a/b;
-        }
-        
+    public class Write
+    {
+        public static void WriteNum(double c) => Console.WriteLine(Convert.ToString(c));
     }
 
 
-    
-        
-        
+
     class Program
     {
         
@@ -46,11 +32,7 @@ namespace ConsoleApp11
         static void Main(string[] args)
         {
 
-
-            Console.WriteLine(Calculator.Sum(2, 2));
-            Console.WriteLine(Calculator.diff(2, 2));
-            Console.WriteLine(Calculator.comp(2, 2));
-            Console.WriteLine(Calculator.del(2, 2));
+            Calculator.Div(5, 2);
             Console.ReadKey();
 
         }
